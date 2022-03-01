@@ -1,6 +1,6 @@
 # loam_velodyne_Chinese_noted
 
-LOAM学习：论文翻译和详细中文注释，包含一些勘误和未解决的疑问。
+LOAM学习：论文翻译和详细中文注释，包含代码结构框图、一些勘误和未解决的疑问。
 
 # Origin README.md
 
