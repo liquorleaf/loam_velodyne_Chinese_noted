@@ -1,4 +1,8 @@
-# loam_velodyne
+# loam_velodyne_Chinese_noted
+
+LOAM学习：论文翻译和详细中文注释，包含一些勘误和未解决的疑问。
+
+# Origin README.md
 
 ![Screenshot](/capture.bmp)
 Sample map built from [nsh_indoor_outdoor.bag](http://www.frc.ri.cmu.edu/~jizhang03/Datasets/nsh_indoor_outdoor.bag) (opened with [ccViewer](http://www.danielgm.net/cc/))
