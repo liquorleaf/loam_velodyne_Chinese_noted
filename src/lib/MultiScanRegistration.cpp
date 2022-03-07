@@ -136,8 +136,9 @@ bool MultiScanRegistration::setupROS(ros::NodeHandle& node, ros::NodeHandle& pri
 
   // subscribe to input cloud topic 订阅点云输入topic，用handleCloudMessage处理
   _subLaserCloud = node.subscribe<sensor_msgs::PointCloud2>
-      ("/multi_scan_points", 2, &MultiScanRegistration::handleCloudMessage, this);
-
+      ("/velodyne_points", 2, &MultiScanRegistration::handleCloudMessage, this);
+//  _subLaserCloud = node.subscribe<sensor_msgs::PointCloud2>
+//        ("/multi_scan_points", 2, &MultiScanRegistration::handleCloudMessage, this);
   return true;
 }
 
@@ -204,7 +205,7 @@ void MultiScanRegistration::process(const pcl::PointCloud<pcl::PointXYZ>& laserC
     }
 
     // skip zero valued points 若点和原点几乎重合，则视为无效点
-    if (point.x * point.x + point.y * point.y + point.z * point.z < 0.0001) {
+    if (point.x * point.x + point.y * point.y + point.z * point.z < 0.6) {
       continue;
     }
 
